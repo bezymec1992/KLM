@@ -1,0 +1,99 @@
+// mixin
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+//vars
+$blue: rgb(24, 130, 195);
+$white: #fff;
+$green: #4CAF50;
+$light-green: #b4cb3c;
+$bg: #FAFBFF;
+$black: black;
+$gray: gray;
+$light-gray: rgb(209, 209, 209);
+$red: red;
+$bg-card: #f9f9f9;
+
+/*resets*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: black;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}

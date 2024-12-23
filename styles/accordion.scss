@@ -1,0 +1,136 @@
+.accordions {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  border-radius: 25px;
+}
+
+.accordion {
+  color: #525252;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 32px;
+  transition: all 0.4s ease-out;
+  border-bottom: 1px solid black;
+
+  @include sm {
+    font-size: 18px;
+  }
+
+  .accordion__img {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+.accordion__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.accordion__img-wrap {
+  background-color: rgb(24, 130, 195);
+  width: 40px;
+  height: 40px;
+  border-radius: 33px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include sm {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .accordion__arrow {
+    transition: all 0.5s;
+    width: 17px;
+    height: 10px;
+  }
+}
+
+.active {
+  .accordion__arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.accord__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  max-width: 580px;
+  width: 100%;
+
+  .accordion__title {
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+
+    @include sm {
+      font-size: 18px;
+      text-align: center;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+  }
+
+  @include sm {
+    max-width: fit-content;
+  }
+}
+
+.accordion__number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #434242;
+  color: #434242;
+
+  @include sm {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+}
+
+.accordion-content {
+  background-color: white;
+  color: #aaa;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 1308px;
+  margin: 0 auto;
+  transition: max-height 0.2s ease-out;
+
+  .accordion__txt {
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 100%;
+    font-size: 22px;
+    width: 100%;
+    line-height: 23px;
+
+    @include sm {
+      font-size: 16px;
+    }
+  }
+}

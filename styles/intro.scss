@@ -1,0 +1,77 @@
+.intro {
+  background: url('../imgs/intro.webp') no-repeat center center;
+  height: calc(100dvh - 70px);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 0 15px;
+  position: relative;
+
+  .intro__plane-icon {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    border: 1px solid $blue;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $white;
+
+    @include sm {
+      bottom: 20px;
+      padding: 5px;
+    }
+  }
+
+  .intro__title {
+    font-size: 44px;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+
+  h1::first-letter {
+    color: $blue;
+  }
+
+  .intro__txt {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+  }
+
+  .intro__wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 150px;
+
+    @include sm {
+      padding-top: 50px;
+    }
+
+    .intro__info {
+      background-color: rgba($color: #aa9090, $alpha: 0.2);
+      width: 100%;
+      max-width: 400px;
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .intro__btn {
+    background-color: $blue;
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-size: 22px;
+    font-weight: 300;
+    color: $white;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+  }
+}

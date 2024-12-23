@@ -1,0 +1,104 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 15px;
+  font-size: 14px;
+
+  .footer__plane-icon {
+    border: 1px solid $blue;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $white;
+
+    @include sm {
+      bottom: 20px;
+      padding: 5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      margin-right: 10px;
+    }
+
+    &-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &-name {
+      font-weight: bold;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      margin: 0;
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+}
+
+
+@include xl {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__nav-list {
+    justify-content: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
