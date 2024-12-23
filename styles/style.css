@@ -442,8 +442,7 @@ body.open {
   border-radius: 25px;
   width: 100%;
   max-width: 900px;
-  min-height: 400px;
-  aspect-ratio: 3/1;
+  height: 400px;
 }
 @media (max-width: 768px) {
   .swiper {
